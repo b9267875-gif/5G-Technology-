@@ -1,0 +1,71 @@
+Here's a basic JavaScript example for a 5G Technology webpage:
+// Add event listener to navigation links
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll("header nav a");
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      const targetId = link.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+});
+
+// Toggle dark mode
+function toggleDarkMode() {
+  const body = document.body;
+  body.classList.toggle("dark-mode");
+}
+
+// Form validation example
+function validateForm() {
+  const form = document.getElementById("myForm");
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+
+  if (nameInput.value === "" || emailInput.value === "") {
+    alert("Please fill out all fields.");
+    return false;
+  }
+  return true;
+}
+
+// Interactive 5G feature showcase
+function showcase5GFeatures() {
+  const features = [
+    { title: "Faster Speeds", description: "Experience blazing-fast speeds with 5G." },
+    { title: "Lower Latency", description: "Enjoy seamless connectivity with ultra-low latency." },
+    { title: "Increased Capacity", description: "Support more devices and users with 5G's increased capacity." },
+  ];
+
+  const featureList = document.getElementById("feature-list");
+
+  features.forEach((feature) => {
+    const featureItem = document.createElement("div");
+    featureItem.innerHTML = `
+      <h2>${feature.title}</h2>
+      <p>${feature.description}</p>
+    `;
+    featureList.appendChild(featureItem);
+  });
+}
+
+// Call the showcase5GFeatures function when the page loads
+document.addEventListener("DOMContentLoaded", showcase5GFeatures);
+This JavaScript code includes:
+
+1. *Smooth scrolling*: Navigation links smoothly scroll to the target section.
+2. *Dark mode toggle*: A function to toggle dark mode on and off.
+3. *Form validation*: A basic form validation example.
+4. *Interactive 5G feature showcase*: A function to dynamically display 5G features.
+
+Some potential features to consider adding:
+
+1. *Dynamic data visualization*: Use JavaScript libraries like D3.js to visualize 5G data.
+2. *Real-time updates*: Use WebSockets or APIs to fetch real-time 5G-related data.
+3. *Interactive simulations*: Create interactive simulations to demonstrate 5G concepts.
+4. *Gamification*: Incorporate gamification elements to engage users and promote learning.
+
+Feel free to modify and expand this code to suit your needs!
